@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAULIHOTEL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="./imgs/logo.webp">
+        </div>
+        <div class="navbar-container">
+            <a href="/index.html">HEM</a>
+            <a href="/boka.html">BOKA</a>
+            <a href="/hitta.html">HITTA</a>
+            <a href="/kontakta.html">KONTAKTA</a>
+            <button id="nav-button"><i class='bx bx-menu'></i></button>
+        </div>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="/index.html">HEM</a>
+        <a href="/boka.html">BOKA</a>
+        <a href="/hitta.html">HITTA</a>
+        <a href="/kontakta.html">KONTAKTA</a>
+    </div>
+    <div class="background">
+        <div class="boka-form">
+            <h1>BOKA</h1>
+            <div class="input-field-container">
+                <h1>Förnamn</h1>
+                <input type="text">
+            </div>
+            <div class="input-field-container">
+                <h1>Efternamn</h1>
+                <input type="text">
+            </div>
+            <div class="option-chose">
+                <h1>Rumstyp:</h1>
+                <div class="chose">
+                    <button id="choice-1"><h1>Enkelrum Ekonomi</h1> <h1>200 kr/natt</h1></button>
+                    <button id="choice-2"><h1>Dubbelrum Ekonomi</h1> <h1>350 kr/natt</h1></button>
+                    <button id="choice-3"><h1>Dubbelrum Superior</h1> <h1>500 kr/natt</h1></button>
+                </div>
+            </div>
+            <div class="others">
+                <h1>Övrigt: </h1>
+                <textarea></textarea>
+            </div>
+            <button class="boka-b">BOKA</button>
+        </div>
+    </div>
+    <script>
+        const button1 = document.getElementById("choice-1");
+        button1.classList.add("toggled");
+        const button2 = document.getElementById("choice-2");
+        const button3 = document.getElementById("choice-3");
+
+        button1.addEventListener("click", toggle1);
+        button2.addEventListener("click", toggle2);
+        button3.addEventListener("click", toggle3);
+
+        function toggleoffall(){
+            button1.classList.remove("toggled");
+            button2.classList.remove("toggled");
+            button3.classList.remove("toggled");
+        }
+
+        function toggle1() {
+            toggleoffall();
+            button1.classList.add("toggled");
+        }
+        function toggle2() {
+            toggleoffall();
+            button2.classList.add("toggled");
+        }
+        function toggle3() {
+            toggleoffall();
+            button3.classList.add("toggled");
+        }
+
+    </script>
+</body>
+</html>
